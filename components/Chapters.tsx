@@ -90,7 +90,7 @@ export const CHAPTER_CONTENT: Record<string, (active: boolean) => ReactNode> = {
           </p>
         </div>
         <div className="layer tags" style={{ ["--d" as string]: 0.5 }}>
-          {["React 19", "TanStack", "Next.js SSR", "Zustand", "Twilio", "Sentry"].map(
+          {["React 19", "TanStack", "Next.js SSR", "NestJS", "Zustand", "Twilio", "WebSockets", "Sentry", "Grafana", "Storybook"].map(
             (t, i) => (
               <span className="rise" key={t} style={{ ["--i" as string]: 3 + Math.floor(i / 2) }}>
                 {t}
@@ -101,11 +101,11 @@ export const CHAPTER_CONTENT: Record<string, (active: boolean) => ReactNode> = {
       </div>
       <div className="layer bullets" style={{ ["--d" as string]: 1.6 }}>
         {[
-          <>Rebuilt a legacy app ground-up on TanStack, with <em>accessibility designed in</em> rather than retrofitted.</>,
-          <>Profiled a constrained codebase until Lighthouse moved <em>25 to 53</em> and builds got <em>30% faster</em>.</>,
-          <>Owned CRM, Dialer, Email Verifier and AI Sequences: <em>the features that bill</em>.</>,
+          <>Architected <em>AI Sequences</em> and rebuilt the sequence builder — the multi-step workflow customers run their outreach on.</>,
+          <>Own the backend too: shipped production REST APIs in <em>NestJS</em>, plus Twilio access-token and webhook handling for the Dialer.</>,
+          <>Profiled a constrained codebase until Lighthouse moved <em>25 to 53</em> and builds got <em>30% faster</em> — then watched it in production with Sentry and Grafana.</>,
           <>Architected a Next.js SERP of <em>around 20,000</em> server-rendered pages with dynamic sitemaps.</>,
-          <>Broke 3,000-line components into code-split modules and retired non-hook logic for good.</>,
+          <>Rebuilt a legacy app ground-up on TanStack, with <em>accessibility designed in</em> rather than retrofitted.</>,
         ].map((node, i) => (
           <div className="bl rise" key={i} style={{ ["--i" as string]: 3 + i }}>
             <i className="mono">{String(i + 1).padStart(2, "0")}</i>
@@ -132,7 +132,7 @@ export const CHAPTER_CONTENT: Record<string, (active: boolean) => ReactNode> = {
           </p>
         </div>
         <div className="layer tags" style={{ ["--d" as string]: 0.5 }}>
-          {["React", "Recoil", "Redux", "Material UI", "D3.js", "Service workers"].map(
+          {["React", "Recoil", "Redux", "Material UI", "D3.js", "Swiper.js", "Service workers"].map(
             (t, i) => (
               <span className="rise" key={t} style={{ ["--i" as string]: 3 + Math.floor(i / 2) }}>
                 {t}
@@ -145,8 +145,8 @@ export const CHAPTER_CONTENT: Record<string, (active: boolean) => ReactNode> = {
         {[
           <>Shipped the storefront&apos;s first working POC in <em>one week</em>, inside a three-person team.</>,
           <>Halved load time (<em>5–6s down to 2–3s</em>) with bundle cleanup, code-splitting and service workers.</>,
-          <>Architected the configurable CMS behind it: page creation and order management for non-engineers.</>,
-          <>Built a customer-journey dashboard in D3 and rebuilt the routing for an internal data portal.</>,
+          <>Architected the configurable CMS behind it: page creation, order management and list-virtualized views for non-engineers.</>,
+          <>Built a customer-journey dashboard in D3, plus a transcript-analysis dashboard charting <em>sentiment and conversation state</em>.</>,
           <>Led the team through sprints, mentored two juniors, and ran client conversations directly.</>,
         ].map((node, i) => (
           <div className="bl rise" key={i} style={{ ["--i" as string]: 3 + i }}>
