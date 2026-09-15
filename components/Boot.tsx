@@ -34,7 +34,6 @@ export default function Boot({ onEnter }: { onEnter: () => void }) {
           >
             Begin the record
           </button>
-          <div className="bootHint mono">SOUND IS OFF BY DEFAULT</div>
         </div>
       </div>
     </div>

@@ -5,7 +5,6 @@ import BackgroundCanvas from "./BackgroundCanvas";
 import Boot from "./Boot";
 import { CHAPTER_CONTENT } from "./Chapters";
 import Cursor from "./Cursor";
-import HoldToContinue from "./HoldToContinue";
 import { ambient } from "@/lib/audio";
 import { CHAPTER_META } from "@/lib/data";
 
@@ -15,7 +14,6 @@ export default function Experience() {
   const [started, setStarted] = useState(false);
   const [index, setIndex] = useState(0);
   const [leaving, setLeaving] = useState(-1);
-  const [soundOn, setSoundOn] = useState(false);
   const lockedRef = useRef(true);
   const indexRef = useRef(0);
 
@@ -139,24 +137,6 @@ export default function Experience() {
         <b>YASH PANCHAL</b> <span>— FRONTEND LEAD</span>
       </div>
 
-      <button
-        className={`sound mono${soundOn ? " on" : ""}`}
-        aria-pressed={soundOn}
-        onClick={() => {
-          const on = ambient.toggle();
-          setSoundOn(on);
-          if (on) ambient.setRoot(CHAPTER_META[indexRef.current].note);
-        }}
-      >
-        <span className="eq" aria-hidden="true">
-          <i />
-          <i />
-          <i />
-          <i />
-        </span>
-        <span>{soundOn ? "SOUND ON" : "SOUND OFF"}</span>
-      </button>
-
       <nav className="rail" aria-label="Chapters">
         {CHAPTER_META.map((meta, i) => (
           <button
@@ -180,11 +160,6 @@ export default function Experience() {
           <i style={{ width: `${((index + 1) / CHAPTER_META.length) * 100}%` }} />
         </div>
       </div>
-
-      <HoldToContinue
-        label={index === CHAPTER_META.length - 1 ? "HOLD TO REPLAY" : "HOLD TO CONTINUE"}
-        onComplete={advance}
-      />
 
       {!started && (
         <Boot

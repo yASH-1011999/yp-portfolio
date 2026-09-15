@@ -31,7 +31,7 @@ export const CHAPTER_CONTENT: Record<string, (active: boolean) => ReactNode> = {
         <p className="lead rise" style={{ ["--i" as string]: 2 }}>
           Frontend lead, six years deep in React and TypeScript. I take products
           that got slow, find out exactly why, and rebuild the parts that
-          deserve it — then leave the team a way of working that keeps them
+          deserve it, then leave the team a way of working that keeps them
           fast.
         </p>
       </div>
@@ -103,7 +103,7 @@ export const CHAPTER_CONTENT: Record<string, (active: boolean) => ReactNode> = {
         {[
           <>Rebuilt a legacy app ground-up on TanStack, with <em>accessibility designed in</em> rather than retrofitted.</>,
           <>Profiled a constrained codebase until Lighthouse moved <em>25 to 53</em> and builds got <em>30% faster</em>.</>,
-          <>Owned CRM, Dialer, Email Verifier and AI Sequences — <em>the features that bill</em>.</>,
+          <>Owned CRM, Dialer, Email Verifier and AI Sequences: <em>the features that bill</em>.</>,
           <>Architected a Next.js SERP of <em>around 20,000</em> server-rendered pages with dynamic sitemaps.</>,
           <>Broke 3,000-line components into code-split modules and retired non-hook logic for good.</>,
         ].map((node, i) => (
@@ -127,7 +127,7 @@ export const CHAPTER_CONTENT: Record<string, (active: boolean) => ReactNode> = {
             Valens Datalabs
           </h2>
           <p className="lead rise" style={{ ["--i" as string]: 2 }}>
-            Three and a half years on a high-traffic B2C platform — the
+            Three and a half years on a high-traffic B2C platform: the
             storefront customers saw, and the CMS the business ran it from.
           </p>
         </div>
@@ -144,7 +144,7 @@ export const CHAPTER_CONTENT: Record<string, (active: boolean) => ReactNode> = {
       <div className="layer bullets" style={{ ["--d" as string]: 1.6 }}>
         {[
           <>Shipped the storefront&apos;s first working POC in <em>one week</em>, inside a three-person team.</>,
-          <>Halved load time — <em>5–6s down to 2–3s</em> — with bundle cleanup, code-splitting and service workers.</>,
+          <>Halved load time (<em>5–6s down to 2–3s</em>) with bundle cleanup, code-splitting and service workers.</>,
           <>Architected the configurable CMS behind it: page creation and order management for non-engineers.</>,
           <>Built a customer-journey dashboard in D3 and rebuilt the routing for an internal data portal.</>,
           <>Led the team through sprints, mentored two juniors, and ran client conversations directly.</>,
