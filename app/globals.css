@@ -482,15 +482,16 @@ body {
   z-index: 90;
   top: 0;
   left: 0;
-  width: 2rem;
-  height: 2rem;
-  border: 1px solid var(--primary);
+  width: 2.75rem;
+  height: 2.75rem;
+  background: var(--foreground);
   border-radius: 50%;
   mix-blend-mode: difference;
   pointer-events: none;
   opacity: 0;
-  transform: translate3d(calc(var(--mouse-x) - 1rem), calc(var(--mouse-y) - 1rem), 0);
-  transition: opacity 180ms;
+  transform: translate3d(calc(var(--mouse-x) - 1.375rem), calc(var(--mouse-y) - 1.375rem), 0)
+    scale(1);
+  transition: opacity 180ms, transform 90ms linear;
   display: none;
 }
 @media (min-width: 900px) and (hover: hover) and (pointer: fine) {
