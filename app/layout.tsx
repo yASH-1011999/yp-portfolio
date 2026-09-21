@@ -1,57 +1,74 @@
-import type { Metadata, Viewport } from "next";
-import { Bricolage_Grotesque, IBM_Plex_Mono } from "next/font/google";
+import type { Metadata } from "next";
+import { Archivo, Archivo_Black, DM_Mono } from "next/font/google";
+import { SiteHeader } from "@/components/site-header";
+import { ChapterNavigation } from "@/components/chapter-navigation";
+import { ScrollProgress } from "@/components/scroll-progress";
+import { PointerEffects } from "@/components/pointer-effects";
+import { SITE } from "@/lib/portfolio-data";
 import "./globals.css";
 
-const display = Bricolage_Grotesque({
+const archivoBlack = Archivo_Black({
+  weight: "400",
   subsets: ["latin"],
-  variable: "--font-display",
   display: "swap",
+  variable: "--font-archivo-black",
 });
 
-const mono = IBM_Plex_Mono({
+const archivo = Archivo({
+  weight: ["400", "500", "600"],
   subsets: ["latin"],
-  weight: ["400", "500"],
-  variable: "--font-mono",
   display: "swap",
+  variable: "--font-archivo",
 });
 
-const SITE = "https://yashpanchal.dev";
+const dmMono = DM_Mono({
+  weight: ["300", "400", "500"],
+  subsets: ["latin"],
+  display: "swap",
+  variable: "--font-dm-mono",
+});
 
 export const metadata: Metadata = {
-  metadataBase: new URL(SITE),
-  title: "Yash Panchal — Frontend Lead",
-  description:
-    "Frontend lead in Ahmedabad. Six years making React and Next.js products feel instant. An interactive record of the work.",
+  title: SITE.title,
+  description: SITE.description,
+  authors: [{ name: SITE.name }],
+  icons: { icon: "/favicon.svg" },
+  robots: { index: true, follow: true },
   openGraph: {
-    title: "Yash Panchal — Frontend Lead",
-    description:
-      "Six years making React and Next.js products feel instant. An interactive record of the work.",
-    url: SITE,
-    siteName: "Yash Panchal",
+    title: SITE.title,
+    description: SITE.description,
     type: "website",
   },
-  twitter: {
-    card: "summary_large_image",
-    title: "Yash Panchal — Frontend Lead",
-    description: "Six years making React and Next.js products feel instant.",
-  },
+  twitter: { card: "summary_large_image" },
 };
 
-export const viewport: Viewport = {
-  themeColor: "#06090C",
-  width: "device-width",
-  initialScale: 1,
-  maximumScale: 1,
-};
+/* Runs before paint so the saved / system theme is applied with no flash.
+   The class is added to <html> only on the client, so server markup is
+   theme-neutral (html has suppressHydrationWarning for this one attribute). */
+const themeScript = `(function(){var r=document.documentElement;try{var t=localStorage.getItem('yp-theme');if(t!=='light'&&t!=='dark'){t=window.matchMedia('(prefers-color-scheme: light)').matches?'light':'dark'}r.classList.add(t);r.style.colorScheme=t}catch(e){r.classList.add('dark');r.style.colorScheme='dark'}})();`;
 
 export default function RootLayout({
   children,
-}: {
-  children: React.ReactNode;
-}) {
+}: Readonly<{ children: React.ReactNode }>) {
   return (
-    <html lang="en" className={`${display.variable} ${mono.variable}`}>
-      <body>{children}</body>
+    <html
+      lang="en"
+      suppressHydrationWarning
+      className={`${archivoBlack.variable} ${archivo.variable} ${dmMono.variable}`}
+    >
+      <head>
+        <script dangerouslySetInnerHTML={{ __html: themeScript }} />
+      </head>
+      <body>
+        <a className="skip-link" href="#work">
+          Skip to selected work
+        </a>
+        <SiteHeader />
+        <ChapterNavigation />
+        <ScrollProgress />
+        <PointerEffects />
+        {children}
+      </body>
     </html>
   );
 }
