@@ -9,8 +9,8 @@ export function PortfolioHero() {
 
       <div className="hero-meta">
         <span>Yash Panchal®</span>
-        <span>Frontend lead / Ahmedabad</span>
-        <span>Local time / IST</span>
+        <span>Frontend Engineer, Performance &amp; Systems</span>
+        <span>Open to Relocate</span>
       </div>
 
       <div className="hero-body">
@@ -24,8 +24,7 @@ export function PortfolioHero() {
 
       <p className="hero-code" aria-hidden="true">
         <span>06Y</span>
-        <span>20K</span>
-        <span>−30</span>
+        <span className="hero-code-label">EXP</span>
       </p>
 
       <div className="hero-support">

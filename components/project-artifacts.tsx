@@ -2,7 +2,7 @@
    screenshots. Purely decorative, so they are hidden from assistive tech;
    the project's evidence list carries the real content. */
 
-const SEQUENCE_STEPS = ["Lead added", "Personalise", "Send email", "Wait 2 days"];
+const SALESHANDY_FEATURES = ["CRM / Kanban", "Dialer + Chrome ext.", "Email Verifier", "AI Sequences"];
 
 export function SequenceArtifact() {
   return (
@@ -13,13 +13,13 @@ export function SequenceArtifact() {
           <i />
           <i />
         </span>
-        <span>AI_SEQUENCE.BUILD</span>
+        <span>SALESHANDY.SUITE</span>
       </div>
       <ol className="flow">
-        {SEQUENCE_STEPS.map((step, i) => (
-          <li key={step} className={`step${step === "Send email" ? " is-hot" : ""}`}>
+        {SALESHANDY_FEATURES.map((feature, i) => (
+          <li key={feature} className={`step${feature === "AI Sequences" ? " is-hot" : ""}`}>
             <span className="idx">0{i + 1}</span>
-            {step}
+            {feature}
           </li>
         ))}
       </ol>
@@ -46,13 +46,13 @@ export function PerformanceArtifact() {
           />
           <polyline
             className="trace"
-            points="8,28 70,46 130,92 190,118 250,140 320,158 388,172"
+            points="8,172 70,158 130,140 190,118 250,92 320,46 388,28"
           />
-          <circle className="dot" cx="388" cy="172" r="7" />
+          <circle className="dot" cx="388" cy="28" r="7" />
         </svg>
         <div className="perf-read">
-          <p className="perf-big">−55%</p>
-          <p className="perf-small">COLD LOAD</p>
+          <p className="perf-big">55→80</p>
+          <p className="perf-small">LIGHTHOUSE SCORE</p>
         </div>
       </div>
     </div>

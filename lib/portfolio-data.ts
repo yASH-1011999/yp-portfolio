@@ -1,14 +1,12 @@
 export const SITE = {
   name: "Yash Panchal",
   role: "Frontend lead",
-  title: "Yash Panchal — Frontend Lead",
+  title: "Yash Panchal — Frontend Lead | React, Next.js, TypeScript, Node.js",
   description:
-    "Six years engineering fast interfaces, resilient systems, and frontend teams.",
+    "Frontend Lead with 6 years in React, Next.js, TypeScript, and Node.js/NestJS. Full-stack when the feature needs it. Ahmedabad-based, open to remote, relocation, and full-stack-leaning frontend roles.",
   email: "yashpanchal3210@gmail.com",
   linkedin: "https://www.linkedin.com/in/yash-panchal-frontend",
-  /** Pending content — supply real URLs to enable the header links. Never invent. */
-  writingUrl: null as string | null,
-  resumeUrl: null as string | null,
+  resumeUrl: "/yash-panchal-resume.pdf" as string | null,
 };
 
 export const CHAPTERS = [
@@ -48,7 +46,7 @@ export const PROJECTS: Project[] = [
       "Architected around 20,000 server-rendered pages with dynamic sitemaps.",
     ],
     artifact: "sequence",
-    tile: { label: "LIGHTHOUSE", value: "53", sub: "+28 POINTS" },
+    tile: { label: "BUILD TIME", value: "−30%", sub: "FASTER BUILDS" },
   },
   {
     id: "valens",
@@ -65,22 +63,34 @@ export const PROJECTS: Project[] = [
       "Created customer-journey and transcript-analysis dashboards in D3.",
     ],
     artifact: "performance",
-    tile: { label: "FIRST POC", value: "1 WK", sub: "FROM ZERO" },
+    tile: { label: "COLD LOAD", value: "2−3s", sub: "DOWN FROM 5−6s" },
   },
 ];
 
 export const METRICS = [
-  { label: "Legacy Lighthouse", value: "22→48", note: "On an app nobody wanted to touch." },
+  { label: "Legacy score", value: "22→48", note: "Lighthouse, on an app nobody wanted to touch." },
   { label: "Cold storefront load", value: "2–3s", note: "Down from five to six seconds." },
   { label: "Build time", value: "−27%", note: "On every push. For every engineer." },
   { label: "Pre-release defects", value: "10–15", note: "Caught through review and frontend UAT." },
 ];
 
 export const TOOLBOX = [
-  { n: "01", title: "Product UI", stack: ["React", "Next.js", "TypeScript", "TanStack", "Zustand"] },
-  { n: "02", title: "Performance", stack: ["Profiler", "Lighthouse", "Code splitting", "Web Vitals"] },
-  { n: "03", title: "Systems", stack: ["Storybook", "WCAG", "Playwright", "Feature flags"] },
-  { n: "04", title: "Backend", stack: ["NestJS", "Node.js", "PostgreSQL", "WebSockets", "Twilio"] },
+  {
+    title: "Product UI",
+    stack: ["React", "Next.js", "TypeScript", "TanStack Query", "Zustand", "Redux", "Tailwind CSS"],
+  },
+  {
+    title: "Performance",
+    stack: ["Chrome DevTools", "React Profiler", "Lighthouse", "Bundle analysis", "Code splitting", "Service workers"],
+  },
+  {
+    title: "Systems",
+    stack: ["Storybook", "WCAG", "Jest", "Playwright", "Feature flags", "single-spa microfrontends"],
+  },
+  {
+    title: "Backend",
+    stack: ["NestJS", "Node.js", "MySQL", "REST APIs", "WebSockets", "Firebase", "Twilio"],
+  },
 ];
 
 export const LEADERSHIP = [

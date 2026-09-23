@@ -40,10 +40,13 @@ export function SiteHeader() {
             </a>
           </li>
           <li>
-            <PendingLink label="Writing" href={SITE.writingUrl} />
-          </li>
-          <li>
-            <PendingLink label="Resume" href={SITE.resumeUrl} />
+            {SITE.resumeUrl ? (
+              <a className="nav-link" href={SITE.resumeUrl} download>
+                Resume
+              </a>
+            ) : (
+              <PendingLink label="Resume" href={null} />
+            )}
           </li>
         </ul>
       </nav>

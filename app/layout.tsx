@@ -31,6 +31,18 @@ const dmMono = DM_Mono({
 export const metadata: Metadata = {
   title: SITE.title,
   description: SITE.description,
+  keywords: [
+    "Yash Panchal",
+    "Frontend Lead",
+    "Senior Frontend Engineer",
+    "React Developer",
+    "Next.js Developer",
+    "TypeScript",
+    "Node.js",
+    "NestJS",
+    "Full Stack Developer",
+    "Ahmedabad frontend developer",
+  ],
   authors: [{ name: SITE.name }],
   icons: { icon: "/favicon.svg" },
   robots: { index: true, follow: true },
@@ -42,10 +54,12 @@ export const metadata: Metadata = {
   twitter: { card: "summary_large_image" },
 };
 
-/* Runs before paint so the saved / system theme is applied with no flash.
-   The class is added to <html> only on the client, so server markup is
-   theme-neutral (html has suppressHydrationWarning for this one attribute). */
-const themeScript = `(function(){var r=document.documentElement;try{var t=localStorage.getItem('yp-theme');if(t!=='light'&&t!=='dark'){t=window.matchMedia('(prefers-color-scheme: light)').matches?'light':'dark'}r.classList.add(t);r.style.colorScheme=t}catch(e){r.classList.add('dark');r.style.colorScheme='dark'}})();`;
+/* Runs before paint so the saved theme is applied with no flash. Dark is the
+   default regardless of system preference unless the visitor has picked
+   light before. The class is added to <html> only on the client, so server
+   markup is theme-neutral (html has suppressHydrationWarning for this one
+   attribute). */
+const themeScript = `(function(){var r=document.documentElement;try{var t=localStorage.getItem('yp-theme');if(t!=='light'&&t!=='dark'){t='dark'}r.classList.add(t);r.style.colorScheme=t}catch(e){r.classList.add('dark');r.style.colorScheme='dark'}})();`;
 
 export default function RootLayout({
   children,

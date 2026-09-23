@@ -11,7 +11,7 @@ export function ContactSection() {
 
       <div className="contact-body">
         <div>
-          <p className="kicker">05 / Your move</p>
+          <p className="kicker">Your move</p>
           <h2 id="contact-title" className="chapter-title display">
             <span className="line">Let’s make</span>
             <span className="line outline">it move.</span>
@@ -19,7 +19,8 @@ export function ContactSection() {
         </div>
 
         <p className="copy">
-          Ahmedabad based. Open to senior and lead frontend roles, remote or relocating.
+          Ahmedabad based. Open to senior and lead frontend roles, remote or relocating — and to
+          full-stack, frontend-heavy roles too.
         </p>
 
         <div className="contact-links">

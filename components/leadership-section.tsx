@@ -8,7 +8,7 @@ export function LeadershipSection() {
       </p>
 
       <div>
-        <p className="kicker">04 / How I lead</p>
+        <p className="kicker">How I lead</p>
         <h2 id="lead-title" className="chapter-title display">
           <span className="line">The team ships</span>
           <span className="line outline">without me.</span>

@@ -10,9 +10,10 @@ export function WorkOpener() {
       </p>
       <p className="kicker">Selected work / real constraints</p>
       <h2 id="work-title" className="chapter-title display">
-        <span className="line">Two products.</span>
+        <span className="line">Two companies.</span>
         <span className="line outline">One obsession.</span>
       </h2>
+      <p className="work-companies">Saleshandy — Valens Datalabs</p>
       <p className="work-desc">
         Speed is not polish at the end. It is architecture, product judgment, and a team that
         knows where the sharp edges are.

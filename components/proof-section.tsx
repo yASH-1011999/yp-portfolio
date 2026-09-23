@@ -7,7 +7,7 @@ export function ProofSection() {
       <Marquee text="MEASURED — SHIPPED — DEFENDED — REPEATED —" reverse onPrimary />
 
       <div className="proof-head">
-        <p className="kicker">02 / Proof, not adjectives</p>
+        <p className="kicker">Proof, not adjectives</p>
         <h2 id="proof-title" className="chapter-title display">
           <span className="line">The numbers</span>
           <span className="line">talk louder.</span>
