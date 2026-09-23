@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64" role="img">
+  <title>YP monogram</title>
+  <rect width="64" height="64" fill="#0A0A0A"/>
+  <path fill="#C7FF18" d="M6 10H19L26 24L33 10H46L32 36V54H20V36Z"/>
+  <path fill="#F4F4F0" fill-rule="evenodd" d="M35 34H52L58 40V46L52 52H45V54H35ZM45 40H50L52 42V44L50 46H45Z"/>
+</svg>
